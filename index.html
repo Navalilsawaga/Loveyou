@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Котята для тебя ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #2d1b3a 0%, #1a1a2e 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 248, 245, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 30px 20px 25px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(255, 200, 180, 0.4);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #4a2c3b;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        h1 span {
+            background: #ffe0d4;
+            padding: 5px 15px;
+            border-radius: 60px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: #7b5c6a;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .kitten-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .kitten-card {
+            background: white;
+            border-radius: 28px;
+            padding: 15px 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            cursor: default;
+            background: #fff5f0;
+            border: 1px solid #ffe9df;
+        }
+
+        .kitten-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .kitten-emoji {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 6px;
+            filter: drop-shadow(0 8px 8px rgba(0,0,0,0.2));
+        }
+
+        .kitten-name {
+            font-weight: 700;
+            color: #583c48;
+            font-size: 1rem;
+            background: #ffede5;
+            border-radius: 20px;
+            padding: 4px 8px;
+            display: inline-block;
+        }
+
+        .message-box {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 18px;
+            margin: 10px 0 20px;
+            border: 1px solid #ffd9cc;
+            color: #3e2a33;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            background: #fffaf7;
+        }
+
+        .heart {
+            color: #ff6b81;
+            font-size: 1.4rem;
+        }
+
+        .help-section {
+            background: #fbe9e7;
+            border-radius: 30px;
+            padding: 20px 15px;
+            margin-top: 15px;
+            border: 2px solid #ffaa8c;
+        }
+
+        .help-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #5e2e3a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .helpline {
+            display: block;
+            background: white;
+            padding: 14px;
+            border-radius: 20px;
+            margin: 10px 0;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #2c1a24;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: 1px solid #ffcfbc;
+            transition: all 0.2s;
+        }
+
+        .helpline:hover {
+            background: #ffd9cc;
+            border-color: #ff7b5c;
+        }
+
+        .phone-icon {
+            font-size: 1.3rem;
+            margin-right: 6px;
+        }
+
+        .crisis-note {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #853e4c;
+            font-weight: 600;
+            background: #fff0eb;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #8b7b84;
+            font-size: 0.8rem;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: #914b5e;
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 400px) {
+            .kitten-grid {
+                gap: 10px;
+            }
+            .kitten-emoji {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>
+            ✨Милые котята✨
+            <span>🐱</span>
+        </h1>
+        <div class="subtitle">специально для тебя, солнышко</div>
+
+        <div class="kitten-grid">
+            <div class="kitten-card">
+                <span class="kitten-emoji">🐈‍⬛</span>
+                <span class="kitten-name">Черныш</span>
+            </div>
+            <div class="kitten-card">
+                <span class="kitten-emoji">🐈</span>
+                <span class="kitten-name">Рыжик</span>
+            </div>
+            <div class="kitten-card">
+                <span class="kitten-emoji">😺</span>
+                <span class="kitten-name">Мурка</span>
+            </div>
+            <div class="kitten-card">
+                <span class="kitten-emoji">🐾</span>
+                <span class="kitten-name">Лапка</span>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <span class="heart">💌</span> Ты не одна. Эти котята мурлычут только для тебя.<br>
+            <strong>Твоя жизнь бесценна.</strong> <span class="heart">❤️‍🩹</span><br>
+            <span style="font-size:0.9rem; color:#5c4b53;">Я рядом, и мир стал лучше, потому что ты в нём есть.</span>
+        </div>
+
+        
+        </div>
+    </div>
+</body>
+</html>
